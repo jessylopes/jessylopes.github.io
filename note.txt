@@ -1,0 +1,7 @@
+page d'accueil
+formations
+compétence 
+projets
+contact 
+
+animation menu : https://synerghetic.net/demander-un-devis
