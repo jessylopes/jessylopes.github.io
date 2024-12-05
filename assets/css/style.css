@@ -848,9 +848,29 @@ form {
     border-radius: 10px;
 }
 
+
 /* //////////////////////////////M'ECRIRE////////////////// */
 
 /* //////////////////////////////ON RESTE EN CONTACT ////////////////// */
+.container-onresteencontact{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+
+.imgdott {
+    width: 120%;
+    border-radius: 5%;
+    opacity: 0.8; 
+    transition: transform 0.3s ease;
+}
+
+.imgdott:hover {
+    transform: scale(1.1);
+}
+
+
 /* //////////////////////////////ON RESTE EN CONTACT ////////////////// */
 
 /* //////////////////////////////FOOTER  ////////////////// */
