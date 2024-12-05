@@ -1,0 +1,217 @@
+MEDIA QUERIES 
+
+/* @media screen and (max-width: 1024px) {
+   .button {
+    font-size: 10px;
+    }
+}*/
+
+----------------------------------------------------
+/* @media screen and (max-width: 1024px) {
+    #premierepage img {
+       width: 150px;
+    }
+} */
+
+/* @media only screen and (max-width: 768px){
+ 
+}
+@media screen and (max-width: 1024px)and (max-width: 1200px) {
+ 
+} */
+--------------------------------------------------------
+/* @media only screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px)and (max-width: 1200px) {
+    .sidebar {
+        display: none;
+    }
+} */
+
+-----------------------------------------------
+/* @media screen and (max-width: 1024px) {
+    #faisonsconnaissance p  {
+        width: 85%;
+        font-size: 12px; 
+        padding: 10px;
+        line-height: 1.8; 
+    }
+} */
+----------------------------------------------
+/* @media screen and (max-width: 1024px) {
+    .container-parcours {
+   padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
+    }
+} */
+
+@media screen and (max-width: 1024px) {
+    .star {
+        font-size: 1.25rem;
+        padding-left: 0.313rem;
+        padding-right: 0.313rem;
+    }
+}
+
+/* @media screen and (max-width: 1024px){
+    .timeline-block:hover {
+        transform: none;
+    }
+} */
+
+/* @media screen and (max-width: 1024px) {
+    .timeline-contenu{
+        padding-left: 15px;
+        padding-right: 5px;
+        font-size:12px ;
+        margin-top: 0;
+    }
+} */
+
+
+/* @media screen and (max-width: 1024px) {
+    .container:before {
+        left: 8px;
+        width: 2px;
+    }
+    .timeline-block {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .timeline-block-right {
+        float: none;
+    }
+    .timeline-block-left {
+        float: none;
+        direction: ltr;
+    }
+} */
+
+/* @media screen and (max-width: 1024px) {
+    .poste{
+        font-size: 10px;
+    }
+} */
+
+/* @media screen and (max-width: 1024px) {
+    .timeline-contenu p{
+        font-size: 12px;
+        line-height: 15px ;
+    }
+} */
+
+/* @media screen and (max-width: 1024px) {
+    .timeline-contenu h3{
+font-size: 10px;
+    }
+    } */
+--------------------------------
+/* @media screen and (max-width: 1024px) {
+    .container-mesprojets{
+       padding-top: 0px;
+        gap: 10px;
+
+    }
+} */
+
+/* @media screen and (max-width: 1024px){
+    .carte-projet {
+        width: 150px;
+        height: 500px;
+        margin-top: 40px;
+    }
+} */
+
+/* @media screen and (max-width: 1024px){
+    .projet-image  {
+height:150px;
+    }
+} */
+
+/* @media screen and (max-width: 1024px){
+    .competenceProjets{
+gap: 5px;
+    }
+} */
+
+/* @media screen and (max-width: 1024px){
+    .projet-info h2{
+font-size: 10px;
+    }
+} */
+
+/* @media screen and (max-width: 1024px){
+    .projet-info p {
+font-size: 12px;
+    }
+} */
+
+/* @media screen and (max-width: 1024px){
+    .competenceProjets p {
+font-size:  8px;
+    }
+} */
+
+/* @media screen and (max-width: 1024px){
+    .button-demo{
+font-size: 10px;
+    }
+} */
+
+---------------------------------------
+/* @media screen and (max-width: 1024px){
+    .section-competences{
+        margin-top: 0px;
+    }
+} */
+
+/* @media screen and (max-width: 1024px){
+    .info p {
+font-size: 7.5px;
+padding: 2px;
+    }
+} */
+
+/* @media screen and (max-width: 1024px){
+    .info h2 {
+font-size: 8px;
+padding: 3px;
+    }
+} */
+
+/* @media screen and (max-width: 1024px){
+    .carte-container{
+        width: 110px;
+        height:110px;
+    }
+} */
+
+/* @media screen and (max-width: 1024px){
+    .cartes-wrapper{
+      gap: 25px;
+    }
+} */
+/* @media screen and (max-width: 1024px){
+    h1{
+font-size: 15px;
+margin-top: 0px ;
+margin-bottom: 0px;
+    }
+} */
+
+---------------
+/* @media screen and (max-width: 1024px){
+.containermecrire{
+    padding-top: 350px;
+}
+} */
+
+
+
+
+

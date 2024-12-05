@@ -59,3 +59,41 @@ function typeMessage() {
 
     typeWriterEffect(); // Commence à taper le message
 }
+
+
+//envoi backend
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
+
+    // Écouter l'événement de soumission du formulaire
+    form.addEventListener("submit", async function(event) {
+        event.preventDefault(); // Empêche la soumission normale du formulaire
+
+        // Récupérer les données du formulaire
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries()); // Convertir FormData en un objet
+
+        // Envoyer les données vers la fonction serverless sur Netlify
+        try {
+            const response = await fetch("/.netlify/functions/contactForm", {
+                method: "POST", // Méthode HTTP utilisée
+                headers: {
+                    "Content-Type": "application/json" // Indiquer que les données sont en JSON
+                },
+                body: JSON.stringify(data) // Convertir les données en JSON et les envoyer dans le corps de la requête
+            });
+
+            // Convertir la réponse en JSON
+            const result = await response.json();
+
+            // Afficher un message de succès ou d'erreur
+            if (response.ok) {
+                alert("Le message a été envoyé avec succès !");
+            } else {
+                alert("Une erreur est survenue. Essayez à nouveau.");
+            }
+        } catch (error) {
+            alert("Une erreur est survenue. Essayez à nouveau.");
+        }
+    });
+});
