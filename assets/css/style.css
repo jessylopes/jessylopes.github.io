@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Alumni+Sans+Pinstripe:ital@0;1&family=Julius+Sans+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* //////////////////////////////GENERAL////////////////// */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    color: #FFF;
+    box-sizing: border-box; 
+}
+
+html {
+    scroll-behavior: smooth;
+    letter-spacing: 0.06em;
+}
+
+body {
+    font-family: "Roboto Flex", sans-serif;
+    word-spacing: 2px;
+    letter-spacing: 2.5px;
+    background-color: #08182b;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+#faisonsconnaissance,
+#mesprojets,
+#mescompetences,
+#mecrire,
+#onresteencontact,
+#monParcours {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 18.75rem;
+}
+
+/* titre pour mediaqueries */
+.titreFormatMediaQuerie {
+    display: none;
+}
+
+/* button */
+#button {
+    max-width: 350px;
+    padding: 0.938rem 0.938rem;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 2.5rem;
+    border: #ff00ff solid 2px;
+    border-radius: 0.313rem;
+    text-decoration: none;
+    word-spacing: 0.063rem;
+    letter-spacing: 0.188rem;
+    margin-top: 3.125rem;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: #ff00ff;
+}
+
+/* effet texte  */
+.text-shadow-effect {
+    text-shadow:
+        0 0 5px #efac78,
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff,
+        0 0 40px #ff00ff;
+}
+/* @@@@@@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES GENERAL @@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+/* //////////////////////////////PREMIERE PAGE ////////////////// */
+#premierepage {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* video  */
+.background-video {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* logo  */
+#premierepage img {
+    width: 21.875rem;
+    z-index: 1;
+}
+
+/* message bienvenue */
+.content {
+    z-index: 1;
+    text-align: center;
+}
+#welcome-message {
+    font-size: 13rem;
+}
+.arrow {
+    font-size: 3.125rem;
+    animation: moveDown 1s ease-in-out infinite alternate;
+}
+@keyframes moveDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(1.25rem);
+    }
+}
+#goToFaisonsConnaissance:hover {
+    cursor: pointer;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES PREMIERE PAGE  @@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* //////////////////////////////SIDE BAR ////////////////// */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: space-around;
+    height: 100vh;
+    padding-left: 2rem;
+    z-index: 1;
+}
+
+.sidebar a {
+    text-decoration: none;
+    font-size: 2.80rem;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.sidebar a:hover {
+    color: #FFF;
+}
+
+.underline-on-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-on-hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.125rem;
+    bottom: -0.125em;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 3000ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.underline-on-hover:hover::after,
+.underline-on-hover.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES SIDE BAR @@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* //////////////////////////////FAISONS CONNAISSANCE////////////////// */
+#faisonsconnaissance p {
+    text-align: center;
+    font-size: 2rem;
+    padding-left: 12.5rem;
+    padding-right: 12.5rem;
+}
+/* Spécifique à Edge Chromium */
+body.edge #faisonsconnaissance p {
+    line-height: 2; /* Espacement des lignes pour Edge uniquement */
+}
+.motClés {
+    font-weight: bolder;
+}
+/*@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES FAISONS CONNAISSANCE @@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+/* //////////////////////////////MON PARCOURS////////////////// */
+#monParcours{
+}
+
+.container-parcours {
+    width: 95%;
+    height: auto;
+    padding-left: 3.6rem;
+    padding-right: 1.25rem;
+}
+
+/* block avec etoile  */
+.timeline-block {
+    width: calc(50% + 0.5rem);
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.timeline-block:hover {
+    transform: scale(1.2);
+    overflow: visible;
+}
+
+/* alignement block etoile  */
+.timeline-block-right {
+    float: right;
+}
+.timeline-block-left {
+    float: left;
+    direction: rtl;
+}
+
+/* etoile */
+.star {
+    font-size: 3.125rem;
+    color: #ff00ff;
+    display: inline-block;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+}
+
+/* block texte  */
+.timeline-contenu {
+    width: 100%;
+    background-color: rgba(30, 30, 30, 0.5);
+    font-size: 1.875rem;
+    border-radius: 0.938rem;
+    margin-top: 0.938rem;
+    padding: 0.5rem;
+}
+.timeline-contenu h3 {
+    font-size: 1.563rem;
+    font-weight: bold;
+}
+.poste {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.timeline-contenu p {
+    font-size: 1.563rem;
+    line-height: 1.563rem;
+    text-align: justify;
+    line-height: 2.375rem;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES MON PARCOURS @@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+/* //////////////////////////////MES PROJETS////////////////// */
+/* emplacement des cartes */
+.container-mesprojets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center; 
+    padding-left: 3rem;
+    align-items: center;   
+    min-height: 100vh;    
+
+}
+
+/* style chaque carte */
+.carte-projet {
+    width: 18.75rem;
+    height: 40rem;
+    background-color: rgba(46, 46, 46, 0.8);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.carte-projet:hover {
+    transform: translateY(-0.75rem);
+    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.3);
+}
+
+/* image de projet */
+.projet-image {
+    width: 100%;
+    height: 10rem;
+    background-size: cover;
+}
+
+/* Informations du projet h2 +p */
+.projet-info {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+/* titre H2 */
+.projet-info h2 {
+    margin-bottom: 0.625rem;
+    font-size: 1.875rem;
+    border-bottom: 0.125rem solid #ffffff;
+    padding-bottom: 0.125rem;
+    font-weight: bold;
+}
+
+/* Paragraphe de description */
+.projet-info p {
+    font-size: 1.25rem;
+    line-height: 1.6em;
+}
+
+/* les compétences */
+.competenceProjets {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.competenceProjets p {
+    border-radius: 0.313rem;
+    font-weight: bold;
+}
+
+/* bouton demo*/
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.25rem;
+    margin-bottom: 0.625rem;
+}
+.button-demo {
+    padding: 0.625rem;
+    margin: 0.625rem 0.625rem 1.25rem 0.625rem;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 0.313rem;
+    text-decoration: none;
+    border: #ff00ff solid 2px;
+    letter-spacing: 0.188rem;
+}
+.button-demo:hover {
+    background-color: #ff00ff;
+}
+
+/* //////////////////////////////Modal////////////////// */
+    .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgba(0,0,0,0.4); 
+    }
+
+    .modal-content {
+        background-color: #08182b;
+        margin: 15% auto;
+        padding: 10px;
+        width: 60%;
+    }
+
+    .close {
+        color: #ffffff;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #ff00ff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES MON PROJETS @@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* //////////////////////////////MES COMPETENCES////////////////// */
+
+/* titre */
+h1 {
+    font-size: 2.5rem;
+    padding: 1.875rem;
+}
+.container-h1 {
+    display: flex;
+    justify-content: center;
+}
+
+/* container carte competences  */
+.cartes-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+}
+
+/* carte competences  */
+.carte-container {
+    width: 17.5rem;
+    height: 17.5rem;
+    perspective: 62.5rem;
+}
+.carte {
+    transform-style: preserve-3d;
+    transition: transform 450ms;
+    width: 100%;
+    height: 100%;
+}
+.carte:hover {
+    transform: rotateY(-78deg) translateZ(1.25rem);
+}
+.carte .poster {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateZ(6.25rem);
+    backface-visibility: hidden;
+}
+.carte .info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(90deg) translateZ(100px);
+    background-color: rgba(30, 30, 30, 0.5);
+    backface-visibility: hidden;
+    font-size: 2em;
+    letter-spacing: 0.125rem;
+}
+.info h2 {
+    padding: 0.625rem;
+    font-size: 1em;
+    font-weight: bold;
+}
+.info p {
+    padding: 0.625rem;
+    font-size: 0.65em;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES MON COMPETENCES@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+/* //////////////////////////////M'ECRIRE////////////////// */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 62.5rem;
+    
+}
+
+.container-bouton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.containermecrire label {
+    font-size: 1.875rem;
+    text-decoration: none;
+    border-bottom: 0.125rem solid #ffffff;
+    padding-bottom: 0.125rem;
+    margin-bottom: 0.625rem;
+    font-weight: bold;
+
+}
+
+.containermecrire input {
+    height: 3.75rem;
+    margin-bottom: 1.25rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 1.875rem;
+    border-radius: 0.625rem;
+    padding-left: 0.938rem;
+    letter-spacing: 0.25rem;
+
+}
+
+.containermecrire textarea {
+    height: 15.625rem;
+    margin-bottom: 1.25rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 1.875rem;
+    color: #fff;
+    padding-left: 0.938rem;
+    padding-top: 0.938rem;
+    border-radius: 0.625rem;
+    letter-spacing: 0.25rem;
+}
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES MECRIRE @@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+/* //////////////////////////////ON RESTE EN CONTACT ////////////////// */
+.imgdott {
+    border-radius: 5%;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.imgdott:hover {
+    transform: scale(1.1);
+}
